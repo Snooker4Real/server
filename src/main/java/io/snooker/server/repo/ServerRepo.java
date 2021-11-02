@@ -1,0 +1,10 @@
+package io.snooker.server.repo;
+
+import io.snooker.server.model.Server;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ServerRepo extends JpaRepository<Server, Long> {
+
+    Server findByIpAddress(String ipAddress);
+
+}
